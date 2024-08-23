@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
+set(PICO_BOARD pico_w)
 
 include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
@@ -16,6 +17,7 @@ add_executable(pico_micro_ros_example
 target_link_libraries(pico_micro_ros_example
     pico_stdlib
     microros
+    pico_cyw43_arch_none
 )
 
 target_include_directories(pico_micro_ros_example PUBLIC
